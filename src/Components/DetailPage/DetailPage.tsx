@@ -24,7 +24,7 @@ const DetailPage: React.FC = () => {
         <SpecAtom title="Classification" value={data?.pokemon.classification} />
         <SpecAtom title="Types" value={data?.pokemon.types} />
         <SpecAtom title="Resistant" value={data?.pokemon.resistant} />
-        {console.log(data?.pokemon.resistant)}
+
         <SpecAtom title="Weakness" value={data?.pokemon.weaknesses} />
       </div>
 
@@ -44,19 +44,6 @@ const DetailPage: React.FC = () => {
                 : ""
             }
           />
-
-          {/* <p style={{ fontSize: "1.5rem" }}>Evolution:</p>
-          <ul>
-            {data?.pokemon.evolutions !== null &&
-              data?.pokemon.evolutions.map((el: any, i: number) => {
-                return (
-                  <li>
-                    <Link to={`/detail/${el.id}`}>{i + 1}</Link>
-                  </li>
-                );
-              })}
-          </ul> */}
-          {console.log(data?.pokemon.evolutions)}
         </div>
       </div>
     </Card>
