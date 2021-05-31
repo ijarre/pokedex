@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { gql, useQuery } from "@apollo/client";
+import React from "react";
+import { useQuery } from "@apollo/client";
 import "./Home.scss";
 import { GET_POKS } from "../GraphQl/query";
 import { Link } from "react-router-dom";

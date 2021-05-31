@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { Card } from "reactstrap";
 import "./DetailPage.scss";
 import SpecAtom from "./SpecAtom";
@@ -9,7 +9,7 @@ import { GET_DETAIL_POK } from "../GraphQl/query";
 const DetailPage: React.FC = () => {
   const { id } = useParams<Record<string, string | undefined>>();
 
-  const { data, error, loading } = useQuery(GET_DETAIL_POK, { variables: { id: id } });
+  const { data } = useQuery(GET_DETAIL_POK, { variables: { id: id } });
 
   return (
     <Card className="container-detail p-2">
