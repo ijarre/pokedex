@@ -1,6 +1,8 @@
 import React from "react";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
+import DetailPage from "./Components/DetailPage/DetailPage";
 
 function App() {
   const client = new ApolloClient({
@@ -9,7 +11,16 @@ function App() {
   });
   return (
     <ApolloProvider client={client}>
-      <Home />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/detail/:id">
+            <DetailPage />
+          </Route>
+        </Switch>
+      </Router>
     </ApolloProvider>
   );
 }

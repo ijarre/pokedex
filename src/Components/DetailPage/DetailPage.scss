@@ -1,0 +1,42 @@
+.container-detail {
+  width: 75vw;
+  margin: 10px auto;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-radius: 5px;
+
+  .spec-box {
+    grid-row: 1/3;
+    grid-column: 2;
+  }
+  .spec {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  .spec:not(:first-of-type) {
+    margin-top: 10px;
+  }
+
+  .title {
+    background-color: black;
+    color: whitesmoke;
+  }
+
+  .evo {
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  .image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-top: 10px;
+      max-width: 20em;
+    }
+  }
+}
