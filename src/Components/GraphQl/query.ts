@@ -27,6 +27,7 @@ export const GET_DETAIL_POK = gql`
 export const GET_POKS = gql`
   query PokemonList($first: Int!) {
     pokemons(first: $first) {
+      id
       name
       image
     }
